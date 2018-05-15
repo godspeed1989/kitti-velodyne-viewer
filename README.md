@@ -1,8 +1,8 @@
 ## kitti-velodyne-viewer
 
-Wiew kitti lidar point cloud with bounding box label by single file.
+View kitti lidar point cloud with bounding box label by single file.
 
-![network](https://github.com/godspeed1989/kitti-velodyne-viewer/blob/master/doc/teaser.png)
+![teaser](https://github.com/godspeed1989/kitti-velodyne-viewer/blob/master/doc/teaser.png)
 
 ## Requirements
 
