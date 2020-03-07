@@ -2,7 +2,7 @@
 
 View kitti lidar point cloud with bounding box label by single file.
 
-![teaser](https://github.com/godspeed1989/kitti-velodyne-viewer/blob/master/doc/teaser.png)
+![teaser](/doc/teaser.png)
 
 ## Requirements
 
@@ -28,3 +28,19 @@ Download KITTI 3D object detection data and organize the folders as follows:
                 training/
                     000003.txt
                 testing/
+
+## convert `.pcd` to `.bin`
+usage:
+```bash
+# pcdfolder is where `.pcd` files are stores
+python pcd2bin.py covert pcdfolder binfolder
+```
+for example:
+
+```bash
+python pcd2bin.py convert pcdfiles outputfolder
+```
+
+## About converting `.bin` to `.pcd`
+There are methods to do it, but all of them are in C++ and PCL lib is required.  
+You can refer to this [kitti_velodyne_bin_to_pcd](https://github.com/HTLife/kitti_velodyne_bin_to_pcd)
