@@ -41,6 +41,20 @@ for example:
 python pcd2bin.py convert pcdfiles outputfolder
 ```
 
-## About converting `.bin` to `.pcd`
-There are methods to do it, but all of them are in C++ and PCL lib is required.  
-You can refer to this [kitti_velodyne_bin_to_pcd](https://github.com/HTLife/kitti_velodyne_bin_to_pcd)
+## convert `.bin` to `.pcd`
+you have to install PCL lib first.
+usage:  
+```bash
+cmake .
+make
+./binpcd --m=bin2pcd --b=velodyne_bin/ --p=velodyne_pcd/
+./binpcd --m=pcd2bin --b=velodyne_bin/ --p=velodyne_pcd/
+```
+Options:  
+```
+--help : produce help message
+--b : bin file folder
+--p : pcd file folder
+--m : mode - bin2pcd, pcd2bin
+```
+refer to [kitti_velodyne_bin_to_pcd](https://github.com/HTLife/kitti_velodyne_bin_to_pcd)
