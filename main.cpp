@@ -98,6 +98,10 @@ void read_filelists(const std::string& dir_path,std::vector<std::string>& out_fi
     struct dirent *ptr;
     DIR *dir;
     dir = opendir(dir_path.c_str());
+    if (dir == NULL){
+        std::cerr << "directory " << dir_path.c_str() << " is not exist" << std::endl;
+        exit(1);
+    }
     out_filelsits.clear();
     while ((ptr = readdir(dir)) != NULL){
         std::string tmp_file = ptr->d_name;
